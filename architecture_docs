@@ -1,0 +1,185 @@
+# Comprehensive MCP Server Architecture Documentation
+
+## Directory Structure
+
+/src/services/mcp/
+├── Core System
+│   ├── AI Brain (Grumble's personality/decision engine)
+│   ├── Treasury Management
+│   └── Interaction Processing
+├── Data Layer
+│   ├── Real-time Market Data
+│   ├── User Interaction History
+│   └── Treasury State
+└── Integration Layer
+├── Blockchain Connectors
+├── Exchange APIs
+└── Social Media Validators
+
+## Primary Components
+
+### AI Brain (Grumble Core)
+- Personality management
+- Decision-making engine  
+- Dynamic fee adjustment system
+- User interaction prioritization
+- Treasury growth strategies
+- Risk management protocols
+
+### Treasury System
+- Multi-wallet management
+- Transaction verification
+- Balance monitoring
+- Profit/loss tracking
+- Reward distribution
+- Fee collection
+
+### Interaction Layer
+- Message queue system
+- Web3 authentication
+- Rate limiting
+- Session management
+- Response prioritization
+
+## Implementation
+
+### Market Data Integration
+class MarketDataProcessor:
+    def __init__(self):
+        self.price_feeds = {}
+        self.volume_trackers = {}
+        self.liquidity_monitors = {}
+
+    async def process_market_data(self):
+        # Real-time price processing
+        # Volume analysis
+        # Liquidity monitoring
+        # Trend detection
+
+### User Analytics
+class UserAnalytics:
+    def __init__(self):
+        self.interaction_history = {}
+        self.success_metrics = {}
+        self.reward_tracking = {}
+
+    async def track_user_interaction(self, user_id, interaction):
+        # Store interaction data
+        # Update success metrics
+        # Calculate reward eligibility
+
+### Blockchain Integration
+class BlockchainConnector:
+    def __init__(self):
+        self.supported_chains = []
+        self.web3_instances = {}
+        self.contract_interfaces = {}
+
+    async def execute_transaction(self, chain_id, transaction_data):
+        # Validate transaction
+        # Execute on chain
+        # Monitor confirmation
+
+### Exchange Integration
+class ExchangeManager:
+    def __init__(self):
+        self.active_exchanges = {}
+        self.order_books = {}
+        self.trading_pairs = {}
+
+    async def place_order(self, exchange, order_data):
+        # Validate order
+        # Check liquidity
+        # Execute trade
+
+### Security Layer
+class SecurityManager:
+    def __init__(self):
+        self.rate_limiters = {}
+        self.fraud_detection = {}
+        self.wallet_validators = {}
+
+    async def validate_interaction(self, interaction_data):
+        # Check rate limits
+        # Validate wallet
+        # Detect suspicious patterns
+
+### Treasury Management
+class TreasuryManager:
+    def __init__(self):
+        self.balances = {}
+        self.strategies = {}
+        self.risk_parameters = {}
+
+    async def process_treasury_action(self, action_type, parameters):
+        # Validate action
+        # Check risk limits
+        # Execute strategy
+        # Update state
+
+### Interaction Processing
+class InteractionProcessor:
+    def __init__(self):
+        self.queue = AsyncPriorityQueue()
+        self.active_sessions = {}
+        self.response_templates = {}
+
+    async def process_interaction(self, interaction):
+        # Validate interaction
+        # Calculate priority
+        # Generate response
+        # Execute actions
+
+## Infrastructure Requirements
+
+### Core Infrastructure
+- High-availability cloud setup
+- Redis for caching
+- PostgreSQL for persistent storage
+- RabbitMQ for message queuing
+
+### External Services
+- Multiple RPC providers
+- Exchange API connections
+- Social media API integrations
+- Market data feeds
+
+### Monitoring
+- Treasury health metrics
+- User interaction metrics
+- System performance metrics
+- Security alerts
+
+## Development Priorities
+
+### Phase Implementation
+PHASE_1 = [
+    "treasury_management",
+    "interaction_processing",
+    "security_layer"
+]
+
+PHASE_2 = [
+    "market_integration",
+    "user_analytics",
+    "reward_system"
+]
+
+### Integration Timeline
+1. Basic treasury management
+2. User interaction system
+3. Market data integration
+4. Advanced analytics
+5. Social features
+
+### Scaling Considerations
+class ScalingManager:
+    def __init__(self):
+        self.load_balancers = {}
+        self.shard_management = {}
+        self.replica_sets = {}
+
+    async def adjust_resources(self, metrics):
+        # Monitor system load
+        # Adjust processing capacity
+        # Optimize resource allocation
