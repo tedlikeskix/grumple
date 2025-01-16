@@ -1,0 +1,158 @@
+src/services/mcp/
+├── __init__.py
+├── main.py
+├── core/
+│   ├── __init__.py
+│   ├── config.py
+│   └── client.py
+├── servers/
+│   ├── __init__.py
+│   ├── analytics/
+│   │   ├── metrics.py
+│   │   ├── insights.py
+│   │   ├── predictions.py
+│   │   └── reporting.py
+│   │
+│   ├── research/
+│   │   ├── technical.py
+│   │   ├── fundamental.py
+│   │   ├── sentiment.py
+│   │   └── reports.py
+│   │
+│   ├── social/
+│   │   ├── feed.py
+│   │   ├── groups.py
+│   │   ├── messaging.py
+│   │   └── reputation.py
+│   │
+│   ├── financial/
+│   │   ├── treasury.py
+│   │   ├── transactions.py
+│   │   └── fees.py
+│   │
+│   ├── market/
+│   │   ├── price.py
+│   │   ├── analytics.py
+│   │   └── volume.py
+│   │
+│   ├── trading/
+│   │   ├── orders.py
+│   │   ├── execution.py
+│   │   └── portfolio.py
+│   │
+│   ├── content/
+│   │   ├── generator.py
+│   │   ├── nft.py
+│   │   └── roleplay.py
+│   │
+│   ├── games/
+│   │   ├── contests.py
+│   │   ├── lottery.py
+│   │   └── betting.py
+│   │
+│   ├── user/
+│   │   ├── profile.py
+│   │   ├── stats.py
+│   │   └── preferences.py
+│   │
+│   ├── cache/
+│   │   ├── leaderboard.py
+│   │   └── metrics.py
+│   │
+│   └── marketing/
+│       ├── affiliate/
+│       │   ├── server.py
+│       │   ├── tracking.py
+│       │   └── payouts.py
+│       │
+│       ├── airdrop/
+│       │   ├── server.py
+│       │   ├── targeting.py
+│       │   └── distribution.py
+│       │
+│       └── marketplace/
+│           ├── server.py
+│           ├── listings.py
+│           └── escrow.py
+│
+└── models/
+    ├── __init__.py
+    └── schemas/
+        ├── financial.py
+        ├── market.py
+        ├── trading.py
+        ├── content.py
+        ├── games.py
+        ├── user.py
+        ├── marketing.py
+        ├── analytics.py
+        ├── research.py
+        └── social.py
+```
+
+Module Descriptions:
+
+1. Analytics Module
+- Focused on data analytics and business intelligence
+- Handles platform-wide metrics collection and analysis
+- Provides user behavior analysis and ML-based forecasting
+- Generates automated reporting
+
+2. Research Module
+- Houses technical and fundamental analysis tools
+- Processes market sentiment analysis
+- Generates comprehensive research reports
+
+3. Social Module
+- Manages activity and news feeds
+- Handles community groups and messaging
+- Implements trust and reputation systems
+
+4. Financial Module
+- Manages treasury operations
+- Processes transactions
+- Handles fee management and calculations
+
+5. Market Module
+- Tracks current and historical prices
+- Provides market intelligence
+- Monitors trading volumes
+
+6. Trading Module
+- Manages order processing
+- Handles trade execution
+- Tracks portfolio performance
+
+7. Content Module
+- Generates AI-driven content
+- Creates and manages NFTs
+- Provides interactive storytelling features
+
+8. Games Module
+- Manages contests and competitions
+- Operates lottery systems
+- Handles prediction markets and betting
+
+9. User Module
+- Manages user profiles
+- Tracks user statistics
+- Handles user preferences
+
+10. Cache Module
+- Maintains real-time leaderboards
+- Tracks performance metrics
+
+11. Marketing Module
+- Affiliate Program Management
+  - Tracks conversions
+  - Handles revenue sharing
+- Airdrop Campaign Management
+  - Manages user targeting
+  - Handles token distribution
+- Marketplace Operations
+  - Manages listings
+  - Handles secure transactions
+
+12. Models/Schemas
+- Contains data models and schemas for all modules
+- Ensures data consistency across the platform
