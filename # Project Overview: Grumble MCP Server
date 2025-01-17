@@ -1,0 +1,173 @@
+# Project Overview: Grumble MCP Server
+
+## Purpose
+The Grumble MCP (Model Context Protocol) server is designed to power Grumble, an autonomous AI agent with a primary mission to grow its cryptocurrency treasury while engaging users meaningfully. Grumble will use this server to:
+- Manage interactions with users in a conversational and task-oriented manner.
+- Provide meaningful value through services like financial insights, trading strategies, and games.
+- Dynamically adjust its treasury management strategy based on user engagement and external data.
+
+## Core Objectives
+1. Establish a robust MCP server as the backbone of Grumble’s operations.
+2. Integrate modular components for user interaction, analytics, blockchain functionality, and more.
+3. Ensure scalability and adaptability, allowing for continuous improvement based on user feedback and engagement.
+4. Maintain a charming and quirky personality inspired by George Clooney and Anthony Hopkins.
+
+## File Structure
+The project will follow this modular file structure:
+
+```
+grumbple/
+├── config_manager.py
+├── docker/
+│   ├── docker-compose.yml
+│   └── Dockerfile
+├── main.py
+├── requirements.txt
+├── src/
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── config.py
+│   │   ├── constants.py
+│   │   ├── exceptions.py
+│   │   ├── logging.py
+│   │   ├── security.py
+│   │   └── utils.py
+│   ├── mcp/
+│   │   ├── __init__.py
+│   │   ├── base.py
+│   │   └── servers/
+│   │       ├── ai/
+│   │       │   ├── __init__.py
+│   │       │   ├── audio/
+│   │       │   │   ├── __init__.py
+│   │       │   │   ├── generation.py
+│   │       │   │   └── transcription.py
+│   │       │   ├── claude.py
+│   │       │   ├── content_generation.py
+│   │       │   ├── grok.py
+│   │       │   ├── openai.py
+│   │       │   ├── personality.py
+│   │       │   ├── storytelling.py
+│   │       │   └── translation.py
+│   │       ├── analytics/
+│   │       │   ├── __init__.py
+│   │       │   ├── behavior_tracking.py
+│   │       │   ├── performance.py
+│   │       │   ├── reporting.py
+│   │       │   ├── testing.py
+│   │       │   └── user_analytics.py
+│   │       ├── blockchain/
+│   │       │   ├── __init__.py
+│   │       │   ├── bridges.py
+│   │       │   ├── contracts.py
+│   │       │   ├── oracles.py
+│   │       │   └── wallets.py
+│   │       ├── communication/
+│   │       │   ├── __init__.py
+│   │       │   ├── chat.py
+│   │       │   ├── email.py
+│   │       │   ├── notifications.py
+│   │       │   ├── push.py
+│   │       │   └── sms.py
+│   │       ├── data/
+│   │       │   ├── __init__.py
+│   │       │   ├── cache.py
+│   │       │   ├── database.py
+│   │       │   └── storage.py
+│   │       ├── defi/
+│   │       │   ├── __init__.py
+│   │       │   ├── dex.py
+│   │       │   ├── lending.py
+│   │       │   ├── liquidity.py
+│   │       │   ├── staking.py
+│   │       │   └── yield_farming.py
+│   │       ├── external/
+│   │       │   ├── __init__.py
+│   │       │   ├── docs/
+│   │       │   │   ├── __init__.py
+│   │       │   │   ├── github.py
+│   │       │   │   └── stackexchange.py
+│   │       │   ├── location/
+│   │       │   │   ├── __init__.py
+│   │       │   │   ├── geocoding.py
+│   │       │   │   └── weather.py
+│   │       │   ├── media/
+│   │       │   │   ├── __init__.py
+│   │       │   │   ├── news.py
+│   │       │   │   ├── reddit.py
+│   │       │   │   └── youtube.py
+│   │       │   ├── search.py
+│   │       │   ├── sports.py
+│   │       │   └── wikipedia.py
+│   │       ├── financial/
+│   │       │   ├── __init__.py
+│   │       │   ├── commodities.py
+│   │       │   ├── fees.py
+│   │       │   ├── forex.py
+│   │       │   ├── market_data.py
+│   │       │   ├── treasury.py
+│   │       │   └── xrpl.py
+│   │       ├── games/
+│   │       │   ├── __init__.py
+│   │       │   ├── contests.py
+│   │       │   ├── lottery.py
+│   │       │   ├── mini_games.py
+│   │       │   ├── prediction.py
+│   │       │   └── rng.py
+│   │       ├── market/
+│   │       │   ├── __init__.py
+│   │       │   ├── analytics.py
+│   │       │   ├── metrics.py
+│   │       │   ├── orders.py
+│   │       │   ├── risk.py
+│   │       │   └── trading.py
+│   │       ├── security/
+│   │       │   ├── __init__.py
+│   │       │   ├── audit.py
+│   │       │   ├── consent.py
+│   │       │   ├── fraud.py
+│   │       │   └── verification.py
+│   │       ├── social/
+│   │       │   ├── __init__.py
+│   │       │   ├── feeds.py
+│   │       │   ├── sentiment.py
+│   │       │   ├── verification.py
+│   │       │   └── x.py
+│   │       └── user/
+│   │           ├── __init__.py
+│   │           ├── affiliate.py
+│   │           ├── history.py
+│   │           ├── preferences.py
+│   │           ├── profile.py
+│   │           └── wallet.py
+│   └── utils/
+│       ├── __init__.py
+│       ├── api.py
+│       ├── crypto.py
+│       └── validation.py
+└── tests/
+    ├── __init__.py
+    ├── conftest.py
+    └── unit/
+        ├── __init__.py
+        ├── test_analytics/
+        ├── test_blockchain/
+        ├── test_defi/
+        ├── test_financial/
+        ├── test_games/
+        ├── test_market/
+        └── test_security/
+```
+
+## Interaction Framework
+The server will need to:
+1. Respond dynamically to modular instructions.
+2. Support queries for both building and testing functionalities.
+3. Maintain the overarching context with each interaction, ensuring continuity in development.
+
+GPT-Engineer should be guided step-by-step, starting with foundational elements and building up based on feedback.
+
+---
+
+This overview should be used as the foundational input for GPT-Engineer to initiate the MCP server setup. Let me know if any details need to be added or revised!
+
